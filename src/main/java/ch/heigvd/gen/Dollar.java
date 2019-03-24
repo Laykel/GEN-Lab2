@@ -4,7 +4,7 @@ package ch.heigvd.gen;
  * Dollar class
  */
 public class Dollar {
-    int amount;
+    private int amount;
 
     /**
      * Constructor
@@ -23,6 +23,11 @@ public class Dollar {
         return new Dollar(amount * multiplier);
     }
 
+    /**
+     * Equality method for Dollar
+     * @param object The object to be equal to
+     * @return true if the two objects are equal, false else
+     */
     @Override
     public boolean equals(Object object) {
         Dollar dollar = (Dollar) object;
