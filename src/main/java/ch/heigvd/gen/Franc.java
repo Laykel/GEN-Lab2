@@ -20,15 +20,4 @@ public class Franc extends Money {
     Franc times(int multiplier) {
         return new Franc(amount * multiplier);
     }
-
-    /**
-     * Equality method for Franc
-     * @param object The object to be equal to
-     * @return true if the two objects are equal, false else
-     */
-    @Override
-    public boolean equals(Object object) {
-        Money dollar = (Money) object;
-        return amount == dollar.amount;
-    }
 }
