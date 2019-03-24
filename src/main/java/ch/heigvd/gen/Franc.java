@@ -4,8 +4,6 @@ package ch.heigvd.gen;
  * Franc class
  */
 public class Franc extends Money {
-    private int amount;
-
     /**
      * Constructor
      * @param amount the amount the Franc should represent
