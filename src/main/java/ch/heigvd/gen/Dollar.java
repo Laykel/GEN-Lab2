@@ -3,7 +3,7 @@ package ch.heigvd.gen;
 /**
  * Dollar class
  */
-public class Dollar {
+public class Dollar extends Money {
     private int amount;
 
     /**
