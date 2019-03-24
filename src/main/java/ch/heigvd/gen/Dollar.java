@@ -4,8 +4,6 @@ package ch.heigvd.gen;
  * Dollar class
  */
 public class Dollar extends Money {
-    private int amount;
-
     /**
      * Constructor
      * @param amount the amount the Dollar should represent
