@@ -30,7 +30,7 @@ abstract public class Money {
      * @return
      */
     static Money franc(int amount) {
-        return new Franc(amount, null);
+        return new Franc(amount, "CHF");
     }
 
     /**
