@@ -43,6 +43,15 @@ public class Money implements Expression {
     }
 
     /**
+     * Reduce expression
+     * @param to
+     * @return
+     */
+    public Money reduce(String to) {
+        return this;
+    }
+
+    /**
      * Multiply a money by a value
      * @param multiplier The value by which to multiply our money
      * @return a new money object with the correct value
