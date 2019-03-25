@@ -62,4 +62,15 @@ public class AppTest {
         assertEquals("USD", Money.dollar(1).currency());
         assertEquals("CHF", Money.franc(1).currency());
     }
+
+    /**
+     * Test reduce
+     */
+    @Test
+    public void testReduceSum() {
+        Expression sum = new Sum(Money.dollar(3), Money.dollar(4));
+        Bank bank = new Bank();
+        Money result = bank.reduce(sum, "USD");
+        assertEquals(Money.dollar(7), result);
+    }
 }
