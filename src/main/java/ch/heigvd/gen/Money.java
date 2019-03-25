@@ -22,7 +22,7 @@ public class Money {
      * @return
      */
     static Money dollar(int amount) {
-        return new Dollar(amount, "USD");
+        return new Money(amount, "USD");
     }
 
     /**
@@ -31,7 +31,7 @@ public class Money {
      * @return
      */
     static Money franc(int amount) {
-        return new Franc(amount, "CHF");
+        return new Money(amount, "CHF");
     }
 
     /**
