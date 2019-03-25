@@ -5,6 +5,7 @@ package ch.heigvd.gen;
  */
 abstract public class Money {
     protected int amount;
+    protected String currency;
 
     /**
      * Factory for dollar objects
@@ -16,6 +17,14 @@ abstract public class Money {
     }
 
     /**
+     * Return the currency of the money
+     * @return the currency of the money
+     */
+    String currency() {
+        return currency;
+    }
+
+    /**
      * Factory for franc objects
      * @param amount
      * @return
@@ -23,8 +32,6 @@ abstract public class Money {
     static Money franc(int amount) {
         return new Franc(amount);
     }
-
-    abstract String currency();
 
     /**
      * Multiply a currency by a factor
