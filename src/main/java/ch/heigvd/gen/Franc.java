@@ -17,7 +17,7 @@ public class Franc extends Money {
      * @param multiplier The value by which to multiply our Franc
      * @return a new Franc object with the correct value
      */
-    Franc times(int multiplier) {
+    Money times(int multiplier) {
         return new Franc(amount * multiplier);
     }
 }

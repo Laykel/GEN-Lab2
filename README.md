@@ -6,7 +6,7 @@ _Author: Luc Wachter_
 - Se familiariser avec le test-driven development et jUnit.
 - Utiliser git.
 - Utiliser les issues de github.
-- Utiliser UML.
+- Utiliser UML pour les diagrammes de classes.
 
 ## Description
 - Le but du TDD : "Produire du code propre qui marche".

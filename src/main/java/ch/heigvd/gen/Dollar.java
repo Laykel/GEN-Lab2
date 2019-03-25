@@ -17,7 +17,7 @@ public class Dollar extends Money {
      * @param multiplier The value by which to multiply our Dollar
      * @return a new Dollar object with the correct value
      */
-    Dollar times(int multiplier) {
+    Money times(int multiplier) {
         return new Dollar(amount * multiplier);
     }
 }
