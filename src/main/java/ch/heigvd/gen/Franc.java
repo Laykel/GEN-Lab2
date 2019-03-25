@@ -8,9 +8,9 @@ public class Franc extends Money {
      * Constructor
      * @param amount the amount the Franc should represent
      */
-    Franc(int amount) {
+    Franc(int amount, String currency) {
         this.amount = amount;
-        currency = "CHF";
+        this.currency = "CHF";
     }
 
     /**
@@ -19,6 +19,6 @@ public class Franc extends Money {
      * @return a new Franc object with the correct value
      */
     Money times(int multiplier) {
-        return new Franc(amount * multiplier);
+        return new Franc(amount * multiplier, null);
     }
 }
