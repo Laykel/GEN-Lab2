@@ -4,12 +4,15 @@ package ch.heigvd.gen;
  * Dollar class
  */
 public class Dollar extends Money {
+    private String currency;
+
     /**
      * Constructor
      * @param amount the amount the Dollar should represent
      */
     Dollar(int amount) {
         this.amount = amount;
+        currency = "USD";
     }
 
     /**
@@ -17,7 +20,7 @@ public class Dollar extends Money {
      * @return the currency of the money
      */
     String currency() {
-        return "USD";
+        return currency;
     }
 
     /**
