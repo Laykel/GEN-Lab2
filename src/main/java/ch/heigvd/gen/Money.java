@@ -3,7 +3,7 @@ package ch.heigvd.gen;
 /**
  * Money class
  */
-abstract public class Money {
+public class Money {
     protected int amount;
     protected String currency;
 
@@ -47,7 +47,9 @@ abstract public class Money {
      * @param multiplier
      * @return
      */
-    abstract Money times(int multiplier);
+    Money times(int multiplier) {
+        return null;
+    }
 
     /**
      * Equality method for Money
@@ -58,5 +60,10 @@ abstract public class Money {
     public boolean equals(Object object) {
         Money money = (Money) object;
         return amount == money.amount && getClass().equals(money.getClass());
+    }
+
+    @Override
+    public String toString() {
+        return amount + " " + currency;
     }
 }
