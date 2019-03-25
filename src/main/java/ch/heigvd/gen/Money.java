@@ -3,7 +3,7 @@ package ch.heigvd.gen;
 /**
  * Money class
  */
-public class Money {
+abstract public class Money {
     protected int amount;
 
     /**
@@ -14,6 +14,13 @@ public class Money {
     static Dollar dollar(int amount) {
         return new Dollar(amount);
     }
+
+    /**
+     * Multiply a currency by a factor
+     * @param multiplier
+     * @return
+     */
+    abstract Money times(int multiplier);
 
     /**
      * Equality method for Money
