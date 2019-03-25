@@ -33,6 +33,18 @@ public class AppTest {
     }
 
     /**
+     * Test whether plus method returns a Sum
+     */
+    @Test
+    public void testPlusReturnsSum() {
+        Money five = Money.dollar(5);
+        Expression result = five.plus(five);
+        Sum sum = (Sum) result;
+        assertEquals(five, sum.augend);
+        assertEquals(five, sum.addend);
+    }
+
+    /**
      * Test equality between two Dollar objects
      */
     @Test
