@@ -19,6 +19,6 @@ public class Franc extends Money {
      * @return a new Franc object with the correct value
      */
     Money times(int multiplier) {
-        return new Franc(amount * multiplier, null);
+        return Money.franc(amount * multiplier);
     }
 }
