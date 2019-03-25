@@ -24,6 +24,8 @@ abstract public class Money {
         return new Franc(amount);
     }
 
+    abstract String currency();
+
     /**
      * Multiply a currency by a factor
      * @param multiplier

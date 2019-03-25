@@ -13,6 +13,14 @@ public class Franc extends Money {
     }
 
     /**
+     * Return the currency of the money
+     * @return the currency of the money
+     */
+    String currency() {
+        return "CHF";
+    }
+
+    /**
      * Multiply a Franc by a value
      * @param multiplier The value by which to multiply our Franc
      * @return a new Franc object with the correct value
