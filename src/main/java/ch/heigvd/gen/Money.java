@@ -11,7 +11,7 @@ abstract public class Money {
      * @param amount
      * @return
      */
-    static Dollar dollar(int amount) {
+    static Money dollar(int amount) {
         return new Dollar(amount);
     }
 
