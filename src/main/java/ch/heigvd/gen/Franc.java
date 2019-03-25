@@ -4,8 +4,6 @@ package ch.heigvd.gen;
  * Franc class
  */
 public class Franc extends Money {
-    private String currency;
-
     /**
      * Constructor
      * @param amount the amount the Franc should represent
@@ -13,14 +11,6 @@ public class Franc extends Money {
     Franc(int amount) {
         this.amount = amount;
         currency = "CHF";
-    }
-
-    /**
-     * Return the currency of the money
-     * @return the currency of the money
-     */
-    String currency() {
-        return currency;
     }
 
     /**
