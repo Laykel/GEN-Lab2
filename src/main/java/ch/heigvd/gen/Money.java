@@ -16,6 +16,15 @@ abstract public class Money {
     }
 
     /**
+     * Factory for franc objects
+     * @param amount
+     * @return
+     */
+    static Money franc(int amount) {
+        return new Franc(amount);
+    }
+
+    /**
      * Multiply a currency by a factor
      * @param multiplier
      * @return
