@@ -13,15 +13,7 @@ abstract public class Money {
      * @return
      */
     static Money dollar(int amount) {
-        return new Dollar(amount);
-    }
-
-    /**
-     * Return the currency of the money
-     * @return the currency of the money
-     */
-    String currency() {
-        return currency;
+        return new Dollar(amount, "USD");
     }
 
     /**
@@ -31,6 +23,14 @@ abstract public class Money {
      */
     static Money franc(int amount) {
         return new Franc(amount, "CHF");
+    }
+
+    /**
+     * Return the currency of the money
+     * @return the currency of the money
+     */
+    String currency() {
+        return currency;
     }
 
     /**

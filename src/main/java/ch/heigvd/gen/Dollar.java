@@ -8,9 +8,9 @@ public class Dollar extends Money {
      * Constructor
      * @param amount the amount the Dollar should represent
      */
-    Dollar(int amount) {
+    Dollar(int amount, String currency) {
         this.amount = amount;
-        currency = "USD";
+        this.currency = currency;
     }
 
     /**
@@ -19,6 +19,6 @@ public class Dollar extends Money {
      * @return a new Dollar object with the correct value
      */
     Money times(int multiplier) {
-        return new Dollar(amount * multiplier);
+        return Money.dollar(amount * multiplier);
     }
 }
