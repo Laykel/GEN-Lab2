@@ -43,12 +43,12 @@ public class Money {
     }
 
     /**
-     * Multiply a currency by a factor
-     * @param multiplier
-     * @return
+     * Multiply a money by a value
+     * @param multiplier The value by which to multiply our money
+     * @return a new money object with the correct value
      */
     Money times(int multiplier) {
-        return null;
+        return new Money(amount * multiplier, currency);
     }
 
     /**
@@ -62,6 +62,10 @@ public class Money {
         return amount == money.amount && currency().equals(money.currency());
     }
 
+    /**
+     * String represenation of Money object
+     * @return a String with a representation of the Money object
+     */
     @Override
     public String toString() {
         return amount + " " + currency;
