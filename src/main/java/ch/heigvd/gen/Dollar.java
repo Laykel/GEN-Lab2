@@ -9,8 +9,7 @@ public class Dollar extends Money {
      * @param amount the amount the Dollar should represent
      */
     Dollar(int amount, String currency) {
-        this.amount = amount;
-        this.currency = currency;
+        super(amount, currency);
     }
 
     /**

@@ -8,6 +8,15 @@ abstract public class Money {
     protected String currency;
 
     /**
+     * Constructor
+     * @param amount the amount the Dollar should represent
+     */
+    Money(int amount, String currency) {
+        this.amount = amount;
+        this.currency = currency;
+    }
+
+    /**
      * Factory for dollar objects
      * @param amount
      * @return
