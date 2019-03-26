@@ -66,7 +66,7 @@ public class Money implements Expression {
      * @param addend
      * @return
      */
-    Expression plus(Expression addend) {
+    public Expression plus(Expression addend) {
         return new Sum(this, addend);
     }
 
