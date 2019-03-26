@@ -57,7 +57,7 @@ public class Money implements Expression {
      * @param multiplier The value by which to multiply our money
      * @return a new money object with the correct value
      */
-    Expression times(int multiplier) {
+    public Expression times(int multiplier) {
         return new Money(amount * multiplier, currency);
     }
 
