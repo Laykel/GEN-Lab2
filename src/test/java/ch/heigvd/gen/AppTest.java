@@ -10,9 +10,6 @@ import org.junit.Test;
  * Unit tests for simple App.
  */
 public class AppTest {
-    /**
-     * Test multiplication of a Dollar object
-     */
     @Test
     public void testMultiplication() {
         Money five = Money.dollar(5);
@@ -20,9 +17,6 @@ public class AppTest {
         assertEquals(Money.dollar(15), five.times(3));
     }
 
-    /**
-     * Test addition of two Money objects
-     */
     @Test
     public void testSimpleAddition() {
         Money five = Money.dollar(5);
@@ -32,9 +26,6 @@ public class AppTest {
         assertEquals(Money.dollar(10), reduced);
     }
 
-    /**
-     * Test whether plus method returns a Sum
-     */
     @Test
     public void testPlusReturnsSum() {
         Money five = Money.dollar(5);
@@ -44,9 +35,6 @@ public class AppTest {
         assertEquals(five, sum.addend);
     }
 
-    /**
-     * Test equality between two Dollar objects
-     */
     @Test
     public void testEquality() {
         assertTrue(Money.dollar(5).equals(Money.dollar(5)));
@@ -54,18 +42,12 @@ public class AppTest {
         assertFalse(Money.franc(5).equals(Money.dollar(5)));
     }
 
-    /**
-     * Test money's currency
-     */
     @Test
     public void testCurrency() {
         assertEquals("USD", Money.dollar(1).currency());
         assertEquals("CHF", Money.franc(1).currency());
     }
 
-    /**
-     * Test reduce
-     */
     @Test
     public void testReduceSum() {
         Expression sum = new Sum(Money.dollar(3), Money.dollar(4));
@@ -74,13 +56,18 @@ public class AppTest {
         assertEquals(Money.dollar(7), result);
     }
 
-    /**
-     * Test reduce on a sum
-     */
     @Test
     public void testReduceMoney() {
         Bank bank = new Bank();
         Money result = bank.reduce(Money.dollar(1), "USD");
+        assertEquals(Money.dollar(1), result);
+    }
+
+    @Test
+    public void testReduceMoneyDifferentCurrency() {
+        Bank bank= new Bank();
+        bank.addRate("CHF", "USD", 2);
+        Money result= bank.reduce(Money.franc(2), "USD");
         assertEquals(Money.dollar(1), result);
     }
 }
